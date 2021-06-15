@@ -13,7 +13,7 @@ class PriceList extends Component {
                      return <li className="list-group-item d-flex justify-content-between align-items-center" key={item.id}>
                          <span className="col-1 badge badge-primary">
                              <Ionicon
-                                 className="rounded-circle"
+                                 className="rounded-circle"  
                                  fontSize="30px"
                                  style={{backgroundColor:"#007bff",padding:"5px"}}
                                  color={'#fff'}

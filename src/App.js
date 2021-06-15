@@ -5,7 +5,6 @@ import PriceList from "./components/PriceList";
 import ViewTab from "./components/ViewTab";
 import { LIST_VIEW,CHART_VIEW } from "./utility";
 import MonthPicker from "./components/MonthPicker";
-import {padLeft} from "./utility";
 
 const items = [
   {
@@ -37,10 +36,16 @@ function App() {
   return (
     <div className="App">
       <header>
-        <MonthPicker year={2018} month={5}></MonthPicker>
+        <MonthPicker
+            year={2021}
+            month={5}
+            onChange={(year,month) =>{console.log(year,month)}}
+        >
+        </MonthPicker>
         <ViewTab 
             activeTab={LIST_VIEW}
-        onTabChange={(view)=>{console.log(view)}}></ViewTab>
+            onTabChange={(view)=>{console.log(view)}}>
+        </ViewTab>
         <PriceList
         items = {items} onModifyItem = {(item)=>{alert(item.id)}} onDeleteItem = {(item)=>{alert(item.id)}}/>
       </header>
