@@ -4,7 +4,7 @@ import ViewTab from "../components/ViewTab";
 import { LIST_VIEW,CHART_VIEW,TYPE_INCOME,TYPE_OUTCOME} from "../utility";
 import MonthPicker from "../components/MonthPicker";
 import CreateBtn from '../components/CreateBtn';
-import TatalPrice from '../components/TatalPrice';
+import TotalPrice from '../components/TotalPrice';
 
 const items = [
     {
@@ -43,9 +43,9 @@ class Home extends Component{
             }
         })
         return (
-            <div className="Home">
+            <div className="Home" style={{background:'#8FC7F8'}}>
                 <header>
-                    <div className="row">
+                    <div className="row px-3 py-1">
                         <div className="col">
                             <MonthPicker
                                 year={2021}
@@ -54,21 +54,25 @@ class Home extends Component{
                             >
                             </MonthPicker>
                         </div>
-                        <div className="col">
-                            <TotalPrice
-                                income={totalIncome}
-                                outCome={totalOutcome}
-                                />
+                        <div className="col my-5">
+                                <TotalPrice
+                                    InCome={totalIncome}
+                                    OutCome={totalOutcome}
+                                ></TotalPrice>
                         </div>
-                               
-                                <ViewTab
-                                    activeTab={LIST_VIEW}
-                                    onTabChange={(view)=>{console.log(view)}}>
-                                </ViewTab>
-                                <PriceList
-                                    items = {items} onModifyItem = {(item)=>{alert(item.id)}} onDeleteItem = {(item)=>{alert(item.id)}}/>
                     </div>
                 </header>
+                <div className="content-area py-3 px-3">
+                    <ViewTab
+                        activeTab={LIST_VIEW}
+                        onTabChange={(view)=>{console.log(view)}}>
+                    </ViewTab>
+                    <CreateBtn onClick={() => {}}/>
+                    <PriceList
+                        items = {items}
+                        onModifyItem = {(item)=>{alert(item.id)}}
+                        onDeleteItem = {(item)=>{alert(item.id)}}/>
+                </div>
             </div>
         );
     }

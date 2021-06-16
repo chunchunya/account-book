@@ -45,10 +45,24 @@
       <workItem from="1623647724192" duration="11774000" />
       <workItem from="1623670850705" duration="4535000" />
       <workItem from="1623755643343" duration="9730000" />
+      <workItem from="1623766061193" duration="164000" />
+      <workItem from="1623843786672" duration="7530000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/containers/Home.js</url>
+          <line>45</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

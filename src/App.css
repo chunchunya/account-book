@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.content-area{
+  background: #fff
+}
+
+.middle {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -5,6 +5,7 @@ import PriceList from "./components/PriceList";
 import ViewTab from "./components/ViewTab";
 import { LIST_VIEW,CHART_VIEW } from "./utility";
 import MonthPicker from "./components/MonthPicker";
+import Home from "./containers/Home";
 
 const items = [
   {
@@ -35,20 +36,7 @@ const items = [
 function App() {
   return (
     <div className="App">
-      <header>
-        <MonthPicker
-            year={2021}
-            month={5}
-            onChange={(year,month) =>{console.log(year,month)}}
-        >
-        </MonthPicker>
-        <ViewTab 
-            activeTab={LIST_VIEW}
-            onTabChange={(view)=>{console.log(view)}}>
-        </ViewTab>
-        <PriceList
-        items = {items} onModifyItem = {(item)=>{alert(item.id)}} onDeleteItem = {(item)=>{alert(item.id)}}/>
-      </header>
+       <Home></Home>
     </div>
   );
 }
